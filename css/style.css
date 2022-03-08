@@ -86,6 +86,15 @@ html{
 .product-display .product-display-table td{
     padding: 1.5rem;
 }
+::-webkit-validation-bubble-arrow-clippe.product-display .product-display-table .btn:first-child{
+    margin-top: 0;
+}
+.product-display .product-display-table .btn:last-child{
+    background: crimson;
+}
+.product-display .product-display-table .btn:last-child:hover{
+    background: var(--black);
+}
 @media screen and(max-width:991px) {
     html{
         font-size: 55%;

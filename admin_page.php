@@ -20,7 +20,13 @@ if( isset($_POST['add_product'])){
        }
     }
 
+};
+if(isset($_GET['delete'])){
+    $id=$_GET['delete'];
+    mysqli_query($conn,"DELETE FROM products WHERE id =$id");
+    header('location:admin_page.php');
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -91,7 +97,8 @@ if( isset($_POST['add_product'])){
                        $ <?php echo $row['price']; ?>
                     </td>
                     <td>
-                        action
+                       <a href="admin_update.php?edit=<?php echo $row['id']; ?>" class="btn"><i class="fas fa-edit"> </i>Edit</a>
+                       <a href="admin_page.php?delete=<?php echo $row['id']; ?>" class="btn"><i class="fas fa-trash"> </i>Delete</a>
                     </td>
                 </tr>
                 <?php
