@@ -48,6 +48,13 @@ html{
     padding: 2rem;
     margin: 0 auto;
 }
+.admin-product-form-container .centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
 .admin-product-form-container form{
     max-width: 50rem;
     margin: 0 auto;
